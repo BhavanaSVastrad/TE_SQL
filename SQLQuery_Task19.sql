@@ -64,16 +64,16 @@ INSERT INTO Title
 (006, 'Lead', '2016-06-11 00:00:00'),
 (003, 'Lead', '2016-06-11 00:00:00');
 
---Q-1. Write an SQL query to fetch �FIRST_NAME� from Worker table using the alias name as &lt;WORKER_NAME&gt;.
+--Q-1. Write an SQL query to fetch %FIRST_NAME% from Worker table using the alias name as &lt;WORKER_NAME&gt;.
 Select FIRST_NAME AS WORKER_NAME from Workers;
 
---Q-2. Write an SQL query to fetch �FIRST_NAME� from Worker table in upper case.
+--Q-2. Write an SQL query to fetch %FIRST_NAME% from Worker table in upper case.
 Select upper(FIRST_NAME) from Workers;
 
 --Q-3. Write an SQL query to fetch unique values of DEPARTMENT from Workers table.
 Select distinct DEPARTMENT from Workers;
 
---Q-4. Write an SQL query to print the first three characters of� FIRST_NAME from Worker table.
+--Q-4. Write an SQL query to print the first three characters of% FIRST_NAME from Worker table.
 Select substring(FIRST_NAME,1,3) from Workers;
 
 --Q-5. Write an SQL query that fetches the unique values of DEPARTMENT from Worker table and prints its length.
@@ -82,14 +82,14 @@ Select distinct len(DEPARTMENT) from Workers;
 --Q-6. Write an SQL query to print the FIRST_NAME and LAST_NAME from Worker table into a single column COMPLETE_NAME. A space char should separate them.
 Select CONCAT(FIRST_NAME, ' ', LAST_NAME) AS 'COMPLETE_NAME' from Workers;
 
---Q-7. Write an SQL query to print details for Workers with the first name as �Vipul� and �Satish� from Worker table.
+--Q-7. Write an SQL query to print details for Workers with the first name as %Vipul% and %Satish% from Worker table.
 Select * from Workers where FIRST_NAME in ('VIPUL','SATISH');
 
---Q-8. Write an SQL query to print details of Workers with DEPARTMENT name as �Admin�.
+--Q-8. Write an SQL query to print details of Workers with DEPARTMENT name as %Admin%.
 Select * from Workers where DEPARTMENT like 'Admin%';
 
---Q-9. Write an SQL query to print details of the Workers whose FIRST_NAME ends with �a�.
+--Q-9. Write an SQL query to print details of the Workers whose FIRST_NAME ends with %a%.
 Select * from Workers where FIRST_NAME like '%a';
 
---Q-10. Write an SQL query to print details of the Workers whose FIRST_NAME contains �a�.
+--Q-10. Write an SQL query to print details of the Workers whose FIRST_NAME contains %a%.
 Select * from Workers where FIRST_NAME like '%a%';
